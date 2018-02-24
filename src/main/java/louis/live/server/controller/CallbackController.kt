@@ -14,9 +14,9 @@ class CallbackController {
     private val callbackService: CallbackService? = null
 
     @RequestMapping("startLive")
-    fun startLive(streamCode: String, response: HttpServletResponse){
+    fun startLive(name: String, response: HttpServletResponse){
         var params = HashMap<String, String>()
-        params["streamCode"] = streamCode
+        params["streamCode"] = name
         try {
             callbackService?.startLive(params)
             response.status = 200
@@ -28,9 +28,9 @@ class CallbackController {
     }
 
     @RequestMapping("endLive")
-    fun endLive(streamCode: String, response: HttpServletResponse){
+    fun endLive(name: String, response: HttpServletResponse){
         var params = HashMap<String, String>()
-        params["streamCode"] = streamCode
+        params["streamCode"] = name
         try {
             callbackService?.endLive(params)
             response.status = 200
