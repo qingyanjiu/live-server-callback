@@ -16,4 +16,4 @@ live-config
 
 *adding a env to locate a config server url as below:
 
-docker run -d -p port:8000 -e CONFIG_SERVER_URL=YOUR_CONFIG_SERVER_URL
+docker run -d -p port:8000 -e CONFIG_SERVER_URL=YOUR_CONFIG_SERVER_URL IMAGENAME
