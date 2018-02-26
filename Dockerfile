@@ -6,4 +6,4 @@ RUN mkdir /app && cp target/*.jar /app
 WORKDIR /app
 RUN rm -rf /web
 EXPOSE 8000
-CMD java -jar *.jar
+CMD java -jar -Dcustom.server.url=$CONFIG_SERVER_URL *.jar 
