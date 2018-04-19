@@ -41,4 +41,11 @@ class CallbackController {
         }
     }
 
+    @RequestMapping("health")
+    fun health():Map<*,*>{
+        var result = HashMap<String,Boolean>()
+        result["healthy"] = true
+        return result
+    }
+
 }
